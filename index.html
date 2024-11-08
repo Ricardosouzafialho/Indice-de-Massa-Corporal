@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora IMC</title>
+</head>
+
+<body>
+
+    <header>
+        <h1>Índice de Massa Corporal</h1>
+
+        <nav>
+            <ul>
+                <li><a href="#home">Calculadora IMC</a></li>
+                <li><a href="#historia">História</a></li>
+                <li><a href="#importancia">Importância da Calculadora</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+
+    <!-- SESSÃO HOME -->
+    <section id="home">
+
+            <div class="imgcalc">
+              
+              <p>A Calculadora de IMC (Índice de Massa Corporal) é uma ferramenta amplamente utilizada para avaliar a relação
+                entre o peso e a altura de uma pessoa, ajudando a determinar se ela tem um peso saudável ou está em risco de
+                desenvolver problemas de saúde relacionados ao peso. O conceito do IMC surgiu na década de 1830, criado pelo
+                matemático belga Adolphe Quetelet.</p>
+
+                <img src="ilustracao-de-metabolismo-de-design-plano_23-2150093697-removebg-preview.png" alt="imagem calc"> 
+            </div>
+        
+
+        <label for="altura">Altura:</label>
+        <input type="number" name="altura" id="altura">
+
+        <label for="peso">Peso (Kg):</label>
+        <input type="number" name="peso" id="peso">
+
+        <button onclick="calcImc()">Calcular IMC</button>
+
+        <p>Seu índice de massa corporal é: <span id="resultado"></span></p>
+
+    </section>
+
+
+    <!-- SESSÃO HISTÓRIA -->
+    <section id="historia">
+        <h2>Como surgiu a ideia do IMC?</h2>
+        <p>Adolphe Quetelet, enquanto pesquisava a estatística e a biometria, buscava uma maneira de relacionar a altura
+            e o peso das pessoas com a saúde de forma simples e prática. Ele desenvolveu o índice, que mais tarde seria
+            conhecido como Índice de Massa Corporal, para classificar as pessoas em diferentes categorias de peso.
+
+            Embora o conceito do IMC tenha sido criado no século XIX, ele ganhou popularidade no século XX,
+            especialmente com a crescente conscientização sobre os riscos associados ao excesso de peso e a obesidade. O
+            IMC passou a ser amplamente utilizado por profissionais da saúde, como médicos e nutricionistas, para fazer
+            uma avaliação rápida do estado nutricional dos pacientes.
+            Nos anos mais recentes, com o aumento da busca por informações sobre saúde na internet, ferramentas como a
+            Calculadora de IMC online começaram a se popularizar, tornando o processo ainda mais acessível ao público
+            geral. Essas calculadoras permitem que qualquer pessoa, com acesso à internet, calcule seu IMC rapidamente,
+            sem a necessidade de consultoria profissional para uma estimativa inicial.
+        </p>
+
+    </section>
+
+
+    <section id="importancia">
+        <h2>A relevância da Calculadora de IMC hoje em dia</h2>
+
+        <p>A Calculadora de IMC se tornou uma ferramenta importante, principalmente no contexto da saúde pública, no
+            controle e prevenção de doenças relacionadas ao peso, como diabetes tipo 2, hipertensão e doenças cardíacas.
+            No entanto, é importante observar que o IMC não leva em consideração fatores como a distribuição de gordura,
+            a musculatura, a genética e outros aspectos que também influenciam a saúde.
+
+            Apesar de suas limitações, o IMC é amplamente usado como uma ferramenta prática e inicial para identificar
+            possíveis problemas relacionados ao peso, sendo uma das bases para ações preventivas em saúde. Ao
+            disponibilizar uma calculadora online de IMC, um site contribui para que as pessoas possam monitorar sua
+            saúde de forma fácil e acessível.
+
+            Esse tipo de conteúdo também pode ser complementado com explicações sobre o que cada faixa de IMC
+            representa, dicas para manter um peso saudável e recomendações de quando procurar um profissional para uma
+            avaliação mais completa.</p>
+
+
+    </section>
+
+
+
+
+
+
+    <script>
+        function calcImc() {
+            const altura = document.getElementById("altura").value;
+            const peso = document.getElementById("peso").value;
+            const resultado = peso / (altura ** 2);
+
+            document.getElementById("resultado").textContent = resultado.toFixed(2);
+
+        }
+    </script>
+
+
+
+    <footer>
+        <p>&copy; Todos os Direitos reservados | Ricardo Souza</p>
+    </footer>
+
+</body>
+
+</html>
